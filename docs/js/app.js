@@ -110,14 +110,30 @@ class App {
 		//木星
 		this.meshJupiter = new THREE.Mesh();
 		var loaderJupiter = new THREE.TextureLoader();
-		var textureJupiter = loaderMars.load( './img/jupiter.png');
+		var textureJupiter = loaderMars.load( './img/jupiter2.png');
 		var materialJupiter = new THREE.MeshBasicMaterial({ map:textureJupiter });
-		var geometryJupiter = new THREE.SphereGeometry(30,32,32);
+		var geometryJupiter = new THREE.SphereGeometry(3000,32,32);
 		this.meshJupiter = new THREE.Mesh( geometryJupiter, materialJupiter );
-		this.meshJupiter.position.set(0, 0, 9000);
+		this.meshJupiter.position.set(23000, 23000, 5000);
 		this.scene.add( this.meshJupiter );
 
 
+		//りゅうぐう
+		this.meshRyugu = new THREE.Mesh();
+		var loaderRyugu = new THREE.TextureLoader();
+//		var textureRyugu = loaderMars.load( './img/ryugu.png');
+		var textureRyugu = loaderMars.load( './img/jupiter.png');
+		var materialRyugu = new THREE.MeshBasicMaterial({ map:textureRyugu });
+
+//		var geometryRyugu = new THREE.SphereGeometry(30,32,32);
+		// ドーナツを作成
+//		var geometryRyugu = new THREE.TorusGeometry(300, 100, 64, 100);
+		//輪環
+		var geometryRyugu = new THREE.TorusKnotGeometry( 50, 10, 80, 20);
+
+		this.meshRyugu = new THREE.Mesh( geometryRyugu, materialRyugu );
+		this.meshRyugu.position.set(0, 0, 16000);
+		this.scene.add( this.meshRyugu );
 
 
 
@@ -275,17 +291,24 @@ render();
 		this.meshMars.rotation.y		 += dt * 0.2;
 //		this.meshMars.position.z		 += dt * -140;
 		this.meshMars.position.x		 += dt * -2.5;
-		this.meshMars.position.z		 += dt * -160;
+		this.meshMars.position.z		 += dt * -161;
 
 //		this.sceneCenter.rotation.x		 += dt * 0.3;
 
 		//木星
-		this.meshJupiter.rotation.x		 += dt * -15;
-		this.meshJupiter.rotation.y		 += dt * -3;
-		this.meshJupiter.position.x		 += dt * 0.3;
-		this.meshJupiter.position.y		 += dt * -0.1;
-		this.meshJupiter.position.z		 += dt * -110;
+		this.meshJupiter.rotation.x		 += dt * -0.2;
+		this.meshJupiter.rotation.y		 += dt * -0.02;
+		this.meshJupiter.position.x		 += dt * -290;
+		this.meshJupiter.position.y		 += dt * -290;
+		this.meshJupiter.position.z		 += dt * -25;
 
+
+		//りゅうぐう
+		this.meshRyugu.rotation.x		 += dt * -5;
+		this.meshRyugu.rotation.y		 += dt * -3;
+		this.meshRyugu.position.x		 += dt * 0.3;
+		this.meshRyugu.position.y		 += dt * -0.1;
+		this.meshRyugu.position.z		 += dt * -150;
 
 
 		//月の周回
