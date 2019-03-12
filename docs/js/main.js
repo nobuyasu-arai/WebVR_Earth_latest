@@ -114,7 +114,8 @@ function animate(t) {
 
 	g_cnt++;
 	switch(g_cnt){
-	case 280:
+//	case 280:
+	case 350:
 		createStarField(0xffffff);	//”’F
 		break;
 	case 2500:

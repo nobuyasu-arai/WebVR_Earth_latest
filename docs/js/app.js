@@ -53,7 +53,7 @@ class App {
 		var loaderCloud = new THREE.TextureLoader();
 		var textureCloud = loaderCloud.load( './img/cloud.png');
 		var materialCloud = new THREE.MeshBasicMaterial({ map:textureCloud, transparent:true, side:THREE.DoubleSide });
-		var geometryCloud = new THREE.SphereGeometry(9300,32,32);
+		var geometryCloud = new THREE.SphereGeometry(9010,32,32);
 		this.meshCloud = new THREE.Mesh( geometryCloud, materialCloud );
 		this.meshCloud.position.set(0, 0, -4500);
 		this.scene.add( this.meshCloud );
@@ -75,17 +75,16 @@ class App {
 		var materialMoon = new THREE.MeshBasicMaterial({ map:textureMoon});
 //		var geometryMoon = new THREE.SphereGeometry(6,32,32);
 //		var geometryMoon = new THREE.SphereGeometry(90,90,90);
-		var geometryMoon = new THREE.SphereGeometry(100,32,32);
+//		var geometryMoon = new THREE.SphereGeometry(100,32,32);
+		var geometryMoon = new THREE.SphereGeometry(130,32,32);
 		this.meshMoon = new THREE.Mesh( geometryMoon, materialMoon );
 		this.sceneCenterMoon = new THREE.Scene();
 
-//		this.sceneCenterMoon.position.set(0, 10, 50);
-//		this.sceneCenterMoon.position.set(0, 0, 1500);
-		this.sceneCenterMoon.position.set(0, 0, 1300);
+//		this.sceneCenterMoon.position.set(0, 0, 1300);
+		this.sceneCenterMoon.position.set(0, 0, 1700);
 		this.sceneCenterMoon.add( this.meshMoon );
-//		this.meshMoon.position.set(0, 10, 50)
-		this.meshMoon.position.set(0, 0, 1300);
-//		this.scene.add( this.meshMoon );
+//		this.meshMoon.position.set(0, 0, 1300);
+		this.meshMoon.position.set(0, 0, 1700);
 		this.scene.add( this.sceneCenterMoon );
 
 
@@ -277,18 +276,19 @@ render();
 		this.meshSora.position.z		 += dt * -430;
 
 		this.meshCloud.rotation.y		 += dt * 0.05;
-		this.meshCloud.position.z		 += dt * -430;
+//		this.meshCloud.position.z		 += dt * -430;
+		this.meshCloud.position.z		 += dt * -290;
 //		this.meshCloud2.rotation.y		 += dt * 0.1;
 //		this.meshCloud2.position.z		 += dt * -600;
 
 		this.meshEarth.rotation.y		 += dt * 0.08;
-		this.meshEarth.position.z		 += dt * -430;
+//		this.meshEarth.position.z		 += dt * -430;
+		this.meshEarth.position.z		 += dt * -290;
 
 		//âŒêØ
 //		this.meshMars.rotation.x		 += dt * 0.02;
-//		this.meshMarsrotation.x			 += dt * 0.03;
-//		this.meshMars.rotation.y		 += dt * 0.4;
-		this.meshMars.rotation.y		 += dt * 0.2;
+//		this.meshMars.rotation.y		 += dt * 0.2;
+		this.meshMars.rotation.y		 += dt * 0.3;
 //		this.meshMars.position.z		 += dt * -140;
 		this.meshMars.position.x		 += dt * -2.5;
 		this.meshMars.position.z		 += dt * -161;
@@ -296,8 +296,10 @@ render();
 //		this.sceneCenter.rotation.x		 += dt * 0.3;
 
 		//ñÿêØ
-		this.meshJupiter.rotation.x		 += dt * -0.2;
-		this.meshJupiter.rotation.y		 += dt * -0.02;
+//		this.meshJupiter.rotation.x		 += dt * -0.2;
+		this.meshJupiter.rotation.x		 += dt * -0.15;
+//		this.meshJupiter.rotation.y		 += dt * -0.02;
+		this.meshJupiter.rotation.y		 += dt * -0.05;
 		this.meshJupiter.position.x		 += dt * -290;
 		this.meshJupiter.position.y		 += dt * -290;
 		this.meshJupiter.position.z		 += dt * -25;
@@ -321,8 +323,8 @@ render();
 		this.sceneCenterMoon.position.y  += dt * 15;
 //		this.sceneCenterMoon.position.y  += dt * -1;
 //		this.sceneCenterMoon.position.y  += dt * 15;
-//		this.sceneCenterMoon.position.z  += dt * -300;
-		this.sceneCenterMoon.position.z  += dt * -170;
+//		this.sceneCenterMoon.position.z  += dt * -170;
+		this.sceneCenterMoon.position.z  += dt * -140;
 
 		//åéÇÃâÒì]
 		this.meshMoon.rotation.x  += dt * 0.1;
