@@ -291,7 +291,8 @@ render();
 		this.meshMars.rotation.y		 += dt * 0.3;
 //		this.meshMars.position.z		 += dt * -140;
 		this.meshMars.position.x		 += dt * -2.5;
-		this.meshMars.position.z		 += dt * -161;
+//		this.meshMars.position.z		 += dt * -161;
+		this.meshMars.position.z		 += dt * -180;
 
 //		this.sceneCenter.rotation.x		 += dt * 0.3;
 
@@ -338,8 +339,10 @@ render();
 //		this.sceneCenterCone.rotation.y	 += dt * 0.25;
 
 
-		this.sceneCenterCube.rotation.y	 += dt * 0.25;
-		this.sceneCenterCone.rotation.y	 += dt * 0.25;
+//		this.sceneCenterCube.rotation.y	 += dt * 0.25;
+//		this.sceneCenterCone.rotation.y	 += dt * 0.25;
+		this.sceneCenterCube.rotation.y	 += dt * 0.3;
+		this.sceneCenterCone.rotation.y	 += dt * 0.3;
 //		this.sceneCenterCube.position.x	 += dt * -5;
 //		this.sceneCenterCone.position.x	 += dt * -5;
 //		this.sceneCenterCube.position.y	 += dt * -5;
